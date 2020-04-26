@@ -26,7 +26,7 @@ int main() {
 	// Icone window
 	// -------------------------------------------------------------------------------------------------------------
 
-	Image icon = LoadImagePro( icon_data, 32, 32, UNCOMPRESSED_R8G8B8A8);
+	Image icon = LoadImageEx( icon_data, 32, 32);
 	SetWindowIcon(icon);
 	UnloadImage(icon);
 
@@ -37,7 +37,7 @@ int main() {
 	Texture2D copper[11];
 
 	for(int i = 0; i < 11; i++) {
-		Image _copper = LoadImagePro(copper_data[i], 4, 56, UNCOMPRESSED_R8G8B8A8);
+		Image _copper = LoadImageEx(copper_data[i], 4, 56);
 		copper[i] = LoadTextureFromImage(_copper);
 		UnloadImage(_copper);
 	}
@@ -46,7 +46,7 @@ int main() {
 	// Copper Bar
 	// -------------------------------------------------------------------------------------------------------------
 
-	Image cop1 = LoadImagePro(copper_bar_data, 8, 34, UNCOMPRESSED_R8G8B8A8);
+	Image cop1 = LoadImageEx(copper_bar_data, 8, 34);
 	Texture2D copper_bar = LoadTextureFromImage(cop1);
 	UnloadImage(cop1);
 
@@ -54,7 +54,7 @@ int main() {
 	// Logo
 	// -------------------------------------------------------------------------------------------------------------
 
-	Image _logo = LoadImagePro(logo_data, 636, 108, UNCOMPRESSED_R8G8B8A8);
+	Image _logo = LoadImageEx(logo_data, 636, 108);
 	Texture2D logo = LoadTextureFromImage(_logo);
 	UnloadImage(_logo);
 
@@ -62,7 +62,7 @@ int main() {
 	// Text data
 	// -------------------------------------------------------------------------------------------------------------
 
-	Image _text_data = LoadImagePro(text_data, 636, 236, UNCOMPRESSED_R8G8B8A8);
+	Image _text_data = LoadImageEx(text_data, 636, 236);
 	Texture2D text_data = LoadTextureFromImage(_text_data);
 	UnloadImage(_text_data);
 
@@ -77,7 +77,7 @@ int main() {
 	// Fonte
 	// -------------------------------------------------------------------------------------------------------------
 
-	Image fontData = LoadImagePro(font_data, 2048, 32, UNCOMPRESSED_R8G8B8A8 );
+	Image fontData = LoadImageEx(font_data, 2048, 32 );
 	Texture2D characters = LoadTextureFromImage(fontData);
 	UnloadImage(fontData);
 
